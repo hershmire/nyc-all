@@ -1,0 +1,30 @@
+{
+  "presets": [
+    "babel-preset-react",
+    ["babel-preset-env", {
+      "targets": {
+        "browsers": [
+          "last 2 versions"
+        ]
+      }
+    }]
+  ],
+  "env": {
+    "test": {
+      "plugins": [
+        [
+          "babel-plugin-istanbul",
+          {
+            "exclude": [
+              "**/test-node/**"
+            ]
+          }
+        ]
+      ]
+    }
+  },
+  "plugins": [
+    "babel-plugin-transform-class-properties",
+    "babel-plugin-transform-object-rest-spread"
+  ]
+}
